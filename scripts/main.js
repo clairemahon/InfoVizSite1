@@ -10,7 +10,7 @@ myImage.onclick = () => {
 };
 
 let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+let myHeading = document.querySelector("h2");
 
 function setUserName() {
     const myName = prompt("Please enter your name so I know you've stopped by.");
