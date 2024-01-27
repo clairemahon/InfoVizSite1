@@ -2,10 +2,10 @@ const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/sargentgirlsindresses.jpg") {
-    myImage.setAttribute("src", "images/couturedress.jpeg");
+  if (mySrc === "images/headshot.jpeg") {
+    myImage.setAttribute("src", "images/boulder.jpeg");
   } else {
-    myImage.setAttribute("src", "images/sargentgirlsindresses.jpg");
+    myImage.setAttribute("src", "images/headshot.jpeg");
   }
 };
 
@@ -13,12 +13,12 @@ let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
-    const myName = prompt("Please enter your name.");
+    const myName = prompt("Please enter your name so I know you've stopped by.");
     if (!myName) {
       setUserName();
     } else {
       localStorage.setItem("name", myName);
-      myHeading.textContent = `Style is cool, ${myName}`;
+      myHeading.textContent = `Hello there, ${myName}`;
     }
   }
 
@@ -26,7 +26,7 @@ function setUserName() {
     setUserName();
   } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Style is cool, ${storedName}`;
+    myHeading.textContent = `Hello there, ${storedName}`;
   }
 
   myButton.onclick = () => {
